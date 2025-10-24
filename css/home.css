@@ -1,0 +1,192 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* instead of fixed 100vh */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+
+#bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Video */
+#bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* behind overlay */
+}
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* black with 50% opacity */
+  z-index: -1;
+}
+
+
+.hero-content h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+.hero-content h1 span {
+  color: #e50914;
+}
+.hero-content p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+.cta-btn {
+  background: transparent;
+  color: red;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid red;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: red;
+  color: #fff;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 10%;
+  text-align: center;
+  background: #111;
+}
+.feature-card h2 {
+  color: #e50914;
+  font-size: 2.5rem;
+}
+
+/* About Preview */
+.about-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 10%;
+  gap: 30px; /* heading + paragraph + button ke beech gap */
+}
+
+.about-preview .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* paragraph aur button ke beech gap */
+}
+
+/* Image styling */
+.about-preview img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+/* Programs Preview */
+.programs-preview {
+  text-align: center;
+  padding: 80px 5%;
+}
+.program-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.program-card {
+  width: 280px;
+  margin: 10px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.program-card:hover {
+  transform: scale(1.05);
+}
+.program-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.program-card h3 {
+  margin: 15px 0;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 50px 20px; /* thoda extra top-bottom padding */
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* button aur heading ke bich gap */
+}
+
+.cta-section .cta-btn {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin-top: 4px; /* extra spacing if needed */
+}
+
+
+
+/* Responsive */
+@media(max-width: 768px) {
+   .about-preview {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+    gap: 25px; /* mobile me extra spacing */
+  }
+  
+  .about-preview img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .about-preview .text {
+    width: 100%;
+    gap: 15px; /* mobile me paragraph + button spacing */
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .program-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

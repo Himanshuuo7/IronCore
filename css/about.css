@@ -1,0 +1,115 @@
+/* About Hero */
+.about-hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('../assets/images/about-hero.jpg') center/cover no-repeat;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+}
+.about-hero h1 span {
+  color: #e50914;
+}
+.about-hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.about-info .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px; /* text + image ke bich gap */
+  padding: 80px 10%;
+}
+
+/* Text styling */
+.about-info .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* heading, paragraph, button ke bich gap */
+}
+
+/* Image styling */
+.about-info .image {
+  flex: 1;
+}
+
+.about-info .image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+/* Core Values Section */
+.core-values {
+  text-align: center;
+  padding: 80px 5%;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.value-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.value-card:hover {
+  transform: scale(1.05);
+}
+
+.value-card h3 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+/* Responsive About Page */
+@media(max-width: 768px) {
+  .about-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-info .text, .about-info .image {
+    width: 90%;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-info .container {
+    flex-direction: column; /* stack vertically */
+    text-align: center;
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .about-info .text, .about-info .image {
+    width: 100%;
+  }
+}

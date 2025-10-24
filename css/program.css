@@ -1,0 +1,106 @@
+/* Programs Hero */
+.programs-hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('../assets/images/programs-hero.jpg') center/cover no-repeat;
+}
+
+.programs-hero h1 {
+  font-size: 3rem;
+}
+.programs-hero h1 span {
+  color: #e50914;
+}
+.programs-hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* Programs List Grid */
+.programs-list .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.program-card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.program-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.program-card h3 {
+  margin: 15px 0 10px 0;
+  color: #e50914;
+}
+
+.program-card p {
+  padding: 0 15px 20px 15px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.program-card:hover {
+  transform: scale(1.05);
+}
+
+/* CTA Section (reuse from global.css) */
+.cta-section {
+  text-align: center;
+  padding: 60px 20px; /* extra padding top-bottom */
+  background: #111;
+  color: white;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block; /* ensures it respects spacing */
+  text-decoration: none;
+  color: red;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 30px; /* space between text and button */
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .programs-list .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 5%;
+  }
+
+  .program-card {
+    width: 90%;
+  }
+
+  .programs-hero h1 {
+    font-size: 2rem;
+  }
+
+  .programs-hero p {
+    font-size: 1rem;
+  }
+}

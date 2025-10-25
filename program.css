@@ -62,7 +62,7 @@
 .cta-section {
   text-align: center;
   padding: 60px 20px; /* extra padding top-bottom */
-  background: #111;
+  background: transparent;
   color: white;
 }
 
